@@ -33,3 +33,20 @@ Description: By deleting the records with missing Employer_Location in the data,
 4. Plotly Express Animated Choropleth Map: certified_h1b_map_by_year
 Display content: The trend of the number of certified H1B applications in each state from 2019 to 2022 is displayed through animation.
 Description: The number of certified in each state is binned (such as: 0-1k, 1k-5k, etc.) and mapped with blue discrete colors. Each frame of the animated map represents a year. Users can observe the time series changes of data in each state by playing the animation, and the specific certified value can be displayed when the mouse hovers.
+
+Advantages of this project:
+1. Application of multiple visualization methods
+- Combining multiple visualization methods such as bar chart, pie chart, choropleth map (static + animation), etc., to fully display H1B application data.
+- There are both static charts for easy comparison of data from different years, and interactive and animated maps for dynamic observation of data changes.
+
+2. Strong interactivity
+- Plotly's bar charts and maps support hovering to view detailed data, improving readability.
+- The geographic heat map produced by Folium intuitively shows the geographical distribution of H1B certification in each state.
+
+3. Sufficient data cleaning
+- H1B-related data was screened, and case differences were processed according to Case_Status.
+- Filling missing values, removing data with empty Employer_Location, and ensuring accurate extraction of state information.
+
+THINGS TO IMPROVE:
+The current visualization focuses on time changes (2019-2022) and geographical distribution (states), but does not analyze the H1B application status of employers.
+Improvement: I could collect more data and then add a visualization of employer rankings, for example: Use a bar chart to show the top 10 employers with the most H1B applications. Use a network graph to connect employers and work locations to show the flow trend of H1B applications.
